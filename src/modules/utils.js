@@ -1,3 +1,5 @@
+import dayjs from 'dayjs'
+
 let toString = Object.prototype.toString,
   hasOwnProperty = Object.prototype.hasOwnProperty
 const tools = {
@@ -129,8 +131,7 @@ export const cloneDates = arr => arr.map(d => d.clone())
  * @returns {boolean}
  */
 export const isSameDay = (a, b) => {
-  a = a.clone().set({ h: 12, m: 0 })
-  return Math.abs(a.diff(b, 'hours')) < 20
+  return dayjs(a).isSame(dayjs(b), 'day')
 }
 
 /**

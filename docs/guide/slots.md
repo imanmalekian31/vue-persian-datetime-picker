@@ -5,7 +5,7 @@
 
   <!-- slot for "header-year" -->
   <template #header-year="{ vm, selectedDate }">
-    {{ selectedDate.xYear() }}
+    {{ selectedDate.year() }}
   </template>
 
   <!-- slot for "header-date" -->
@@ -15,7 +15,7 @@
 
   <!-- slot for "month-name" -->
   <template #month-name="{ vm, date, color }">
-    {{ date.xFormat('jMMMM jYYYY') }}
+    {{ date.format('jMMMM jYYYY') }}
   </template>
 
   <!-- slot for "locales" -->
@@ -47,12 +47,12 @@
 
   <!-- slot for "year-item" -->
   <template #year-item="{ vm, year, color }">
-    {{ year.xFormat('jYYYY') }}
+    {{ year.format('jYYYY') }}
   </template>
 
   <!-- slot for "month-item" -->
   <template #month-item="{ vm, monthItem, color }">
-    {{ monthItem.xFormat('jMMMM') }}
+    {{ monthItem.format('jMMMM') }}
   </template>
 
   <!-- slot for "close-btn" -->
