@@ -1009,7 +1009,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db9ba232-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VuePersianDatetimePicker.vue?vue&type=template&id=6b8e50d3&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db9ba232-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VuePersianDatetimePicker.vue?vue&type=template&id=1f8d9a03&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{staticClass:"vpd-main",class:{ 'vpd-is-popover': _vm.isPopover },attrs:{"data-type":_vm.type,"data-locale":_vm.localeData.name,"data-locale-dir":_vm.localeData.config.dir}},[(!_vm.customInputElement)?_c('span',{ref:"inputGroup",class:['vpd-input-group', { 'vpd-disabled': _vm.disabled }]},[_c('label',{staticClass:"vpd-icon-btn",style:({ 'background-color': _vm.color }),attrs:{"for":_vm.id},on:{"click":function($event){$event.preventDefault();$event.stopPropagation();_vm.visible = !_vm.visible}}},[_vm._t("label",[(_vm.type === 'time')?_c('time-icon',{attrs:{"width":"16px","height":"16px"}}):_c('calendar-icon',{attrs:{"width":"16px","height":"16px"}}),(_vm.label)?_c('span',{domProps:{"textContent":_vm._s(_vm.label)}}):_vm._e()])],2),_c('input',_vm._b({ref:"input",class:[_vm.inputClass, { 'vpd-is-editable': _vm.editable }],attrs:{"id":_vm.id,"type":"text","name":_vm.name,"placeholder":_vm.placeholder,"disabled":_vm.disabled},domProps:{"value":_vm.displayValue},on:{"focus":_vm.focus,"blur":_vm.setOutput,"keydown":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.setOutput($event)}}},'input',_vm.inputAttrs,false)),(_vm.altName)?_c('input',{attrs:{"type":"hidden","name":_vm.altName},domProps:{"value":_vm.altFormatted}}):_vm._e(),(_vm.clearable && !_vm.disabled && _vm.displayValue)?_c('i',{staticClass:"vpd-clear-btn",on:{"click":_vm.clearValue}},[_vm._t("clear-btn",[_vm._v("x")],null,{ vm: _vm.vm })],2):_vm._e()]):(_vm.altName)?_c('input',{attrs:{"type":"hidden","name":_vm.altName},domProps:{"value":_vm.altFormatted}}):_vm._e(),_c('transition',{attrs:{"name":_vm.isPopover ? '' : 'vpd-fade-scale'}},[(_vm.visible)?_c('div',{ref:"picker",class:[
         'vpd-wrapper',
         ("vpd-dir-" + (_vm.localeData.config.dir)),
@@ -1058,11 +1058,11 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
                         monthItem.attributes.style
                       ]),attrs:{"disabled":monthItem.disabled},on:{"click":function($event){return _vm.selectMonth(monthItem)}}},'div',monthItem.attributes,false),[_vm._t("month-item",[_vm._v(" "+_vm._s(monthItem.format('MMMM'))+" ")],null,{ vm: _vm.vm, monthItem: monthItem, color: _vm.color })],2)}),0)]):_vm._e()]),_c('transition',{attrs:{"name":"fade"}},[(
                     _vm.steps.length > 1 && _vm.currentStep !== 'd' && _vm.hasStep('d')
-                  )?_c('span',{staticClass:"vpd-close-addon",on:{"click":function($event){return _vm.goStep('d')}}},[_vm._t("close-btn",[_vm._v("x")],null,{ vm: _vm.vm })],2):_vm._e()])],_c('transition',{attrs:{"name":"fade"}},[(_vm.hasStep('t'))?_c('time-section',{directives:[{name:"show",rawName:"v-show",value:(_vm.currentStep === 't'),expression:"currentStep === 't'"}],ref:"time",attrs:{"date":_vm.date,"time":_vm.time,"is-more":_vm.isMore,"is-lower":_vm.isLower,"min-date":_vm.minDate,"max-date":_vm.maxDate,"jump-minute":_vm.jumpMinute,"round-minute":_vm.roundMinute,"get-highlights":_vm.getHighlights,"selected-dates":_vm.selectedDates,"convert-to-locale-number":_vm.convertToLocaleNumber},on:{"update:date":function($event){_vm.date=$event},"update:time":function($event){_vm.time=$event}}}):_vm._e()],1),(_vm.autoSubmit && !_vm.hasStep('t'))?[(!_vm.simple)?_c('br'):_vm._e()]:_c('div',{staticClass:"vpd-actions"},[_vm._t("submit-btn",[_c('button',{style:({ color: _vm.color }),attrs:{"type":"button","disabled":!_vm.canSubmit},domProps:{"textContent":_vm._s(_vm.lang.submit)},on:{"click":_vm.submit}})],null,{ vm: _vm.vm, canSubmit: _vm.canSubmit, color: _vm.color, submit: _vm.submit, lang: _vm.lang }),(!_vm.inline)?_vm._t("cancel-btn",[_c('button',{style:({ color: _vm.color }),attrs:{"type":"button"},domProps:{"textContent":_vm._s(_vm.lang.cancel)},on:{"click":function($event){_vm.visible = false}}})],null,{ vm: _vm.vm, color: _vm.color, lang: _vm.lang }):_vm._e(),(_vm.showNowBtn && _vm.canGoToday)?_vm._t("now-btn",[_c('button',{style:({ color: _vm.color }),attrs:{"type":"button"},domProps:{"textContent":_vm._s(_vm.lang.now)},on:{"click":_vm.goToday}})],null,{ vm: _vm.vm, color: _vm.color, goToday: _vm.goToday, lang: _vm.lang }):_vm._e()],2)],2)])])]):_vm._e()])],1)}
+                  )?_c('span',{staticClass:"vpd-close-addon",on:{"click":function($event){return _vm.goStep('d')}}},[_vm._t("close-btn",[_vm._v("x")],null,{ vm: _vm.vm })],2):_vm._e()])],_c('transition',{attrs:{"name":"fade"}},[(_vm.hasStep('t'))?_c('time-section',{directives:[{name:"show",rawName:"v-show",value:(_vm.currentStep === 't'),expression:"currentStep === 't'"}],ref:"time",attrs:{"date":_vm.date,"time":_vm.time,"type":_vm.type,"is-more":_vm.isMore,"is-lower":_vm.isLower,"min-date":_vm.minDate,"max-date":_vm.maxDate,"jump-minute":_vm.jumpMinute,"round-minute":_vm.roundMinute,"get-highlights":_vm.getHighlights,"selected-dates":_vm.selectedDates,"convert-to-locale-number":_vm.convertToLocaleNumber},on:{"update:date":function($event){_vm.date=$event},"update:time":function($event){_vm.time=$event}}}):_vm._e()],1),(_vm.autoSubmit && !_vm.hasStep('t'))?[(!_vm.simple)?_c('br'):_vm._e()]:_c('div',{staticClass:"vpd-actions"},[_vm._t("submit-btn",[_c('button',{style:({ color: _vm.color }),attrs:{"type":"button","disabled":!_vm.canSubmit},domProps:{"textContent":_vm._s(_vm.lang.submit)},on:{"click":_vm.submit}})],null,{ vm: _vm.vm, canSubmit: _vm.canSubmit, color: _vm.color, submit: _vm.submit, lang: _vm.lang }),(!_vm.inline)?_vm._t("cancel-btn",[_c('button',{style:({ color: _vm.color }),attrs:{"type":"button"},domProps:{"textContent":_vm._s(_vm.lang.cancel)},on:{"click":function($event){_vm.visible = false}}})],null,{ vm: _vm.vm, color: _vm.color, lang: _vm.lang }):_vm._e(),(_vm.showNowBtn && _vm.canGoToday)?_vm._t("now-btn",[_c('button',{style:({ color: _vm.color }),attrs:{"type":"button"},domProps:{"textContent":_vm._s(_vm.lang.now)},on:{"click":_vm.goToday}})],null,{ vm: _vm.vm, color: _vm.color, goToday: _vm.goToday, lang: _vm.lang }):_vm._e()],2)],2)])])]):_vm._e()])],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/VuePersianDatetimePicker.vue?vue&type=template&id=6b8e50d3&
+// CONCATENATED MODULE: ./src/VuePersianDatetimePicker.vue?vue&type=template&id=1f8d9a03&
 
 // EXTERNAL MODULE: ./src/assets/scss/style.scss
 var style = __webpack_require__("78a7");
@@ -1424,12 +1424,12 @@ var LocaleChange_component = normalizeComponent(
 )
 
 /* harmony default export */ var LocaleChange = (LocaleChange_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db9ba232-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/time/TimeSection.vue?vue&type=template&id=1e44cb88&
-var TimeSectionvue_type_template_id_1e44cb88_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['vpd-addon-list vpd-time', { 'vpd-disabled': _vm.isDisableTime }]},[_c('div',{staticClass:"vpd-addon-list-content"},[_c('time-column',{ref:"hour",staticClass:"vpd-time-h",attrs:{"attributes":_vm.timeAttributes,"formatter":_vm.convertToLocaleNumber},on:{"filled":_vm.focusNext},model:{value:(_vm.hourModel),callback:function ($$v) {_vm.hourModel=$$v},expression:"hourModel"}}),_c('time-column',{ref:"minute",staticClass:"vpd-time-m",attrs:{"jump":_vm.jumpMinute,"attributes":_vm.timeAttributes,"formatter":_vm.convertToLocaleNumber},model:{value:(_vm.minuteModel),callback:function ($$v) {_vm.minuteModel=$$v},expression:"minuteModel"}})],1)])}
-var TimeSectionvue_type_template_id_1e44cb88_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db9ba232-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/time/TimeSection.vue?vue&type=template&id=5d7761b9&
+var TimeSectionvue_type_template_id_5d7761b9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['vpd-addon-list vpd-time', { 'vpd-disabled': _vm.isDisableTime }]},[_c('div',{staticClass:"vpd-addon-list-content"},[_c('time-column',{ref:"hour",staticClass:"vpd-time-h",attrs:{"attributes":_vm.timeAttributes,"formatter":_vm.convertToLocaleNumber},on:{"filled":_vm.focusNext},model:{value:(_vm.hourModel),callback:function ($$v) {_vm.hourModel=$$v},expression:"hourModel"}}),_c('time-column',{ref:"minute",staticClass:"vpd-time-m",attrs:{"jump":_vm.jumpMinute,"attributes":_vm.timeAttributes,"formatter":_vm.convertToLocaleNumber},model:{value:(_vm.minuteModel),callback:function ($$v) {_vm.minuteModel=$$v},expression:"minuteModel"}})],1)])}
+var TimeSectionvue_type_template_id_5d7761b9_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/time/TimeSection.vue?vue&type=template&id=1e44cb88&
+// CONCATENATED MODULE: ./src/components/time/TimeSection.vue?vue&type=template&id=5d7761b9&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db9ba232-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/time/TimeColumn.vue?vue&type=template&id=4c237f17&
 var TimeColumnvue_type_template_id_4c237f17_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vpd-time-column",class:_vm.classFastCounter},[_c('btn',{staticClass:"vpd-up-arrow-btn",on:{"update":function($event){return _vm.update(1)},"fastUpdate":_vm.fastUpdateCounter}},[_c('arrow',{attrs:{"width":"20","direction":"up"}})],1),_c('div',{staticClass:"vpd-counter",class:[_vm.directionClass, { 'vpd-is-focused': _vm.isInputFocused }],on:{"mousewheel":function($event){$event.stopPropagation();$event.preventDefault();return _vm.wheelUpdate($event)},"DOMMouseScroll":function($event){$event.stopPropagation();$event.preventDefault();return _vm.wheelUpdate($event)}}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],ref:"input",class:{ 'is-empty': !_vm.inputValue.length },attrs:{"type":"tel","maxlength":_vm.selfValue.length},domProps:{"value":(_vm.inputValue)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.inputValue=$event.target.value},_vm.onInputChange],"focus":function($event){_vm.isInputFocused = true},"blur":function($event){_vm.isInputFocused = false},"keydown":[function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"up",38,$event.key,["Up","ArrowUp"])){ return null; }$event.preventDefault();return _vm.update(1)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"down",40,$event.key,["Down","ArrowDown"])){ return null; }$event.preventDefault();return _vm.update(-1)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }$event.preventDefault();return _vm.onInputSubmit($event)}]}}),_vm._l((_vm.value.toString().split('')),function(item,i){return _c('div',_vm._b({key:("h__" + i),staticClass:"vpd-counter-item"},'div',_vm.attributes,false),[_c('transition',{attrs:{"name":"slideY"}},[_c('span',{key:(item + "__" + i + "_h"),style:({
@@ -2035,6 +2035,10 @@ var TimeColumn_component = normalizeComponent(
         return {};
       }
     },
+    type: {
+      type: String,
+      default: 'date'
+    },
     jumpMinute: {
       type: Number,
       default: 1
@@ -2106,7 +2110,7 @@ var TimeColumn_component = normalizeComponent(
           var time = this.time.clone();
           var jm = this.jumpMinute;
           var m = (jm - time.minute() % jm) % jm;
-          time.add({
+          time = time.add({
             m: m
           });
 
@@ -2115,9 +2119,7 @@ var TimeColumn_component = normalizeComponent(
             // not all of them
 
             this.selectedDates.forEach(function (d) {
-              return d.set({
-                m: time.minute()
-              });
+              d = d.set('m', time.minute());
             });
           }
         }
@@ -2128,19 +2130,12 @@ var TimeColumn_component = normalizeComponent(
   methods: {
     setTime: function setTime(v, k) {
       var time = this.time.clone();
-      time.set(k, v);
+      time = time.set(k, v);
 
       if (this.type !== 'time') {
         var date = this.date.clone();
-        time.set({
-          year: date.year(),
-          month: date.month(),
-          date: date.date()
-        });
-        date.set({
-          hour: time.hour(),
-          minute: time.minute()
-        });
+        time = time.set('year', date.year()).set('month', date.month()).set('date', date.date());
+        date = date.set('hour', time.hour()).set('minute', time.minute());
         this.$emit('update:date', date);
       }
 
@@ -2165,8 +2160,8 @@ var TimeColumn_component = normalizeComponent(
 
 var TimeSection_component = normalizeComponent(
   time_TimeSectionvue_type_script_lang_js_,
-  TimeSectionvue_type_template_id_1e44cb88_render,
-  TimeSectionvue_type_template_id_1e44cb88_staticRenderFns,
+  TimeSectionvue_type_template_id_5d7761b9_render,
+  TimeSectionvue_type_template_id_5d7761b9_staticRenderFns,
   false,
   null,
   null,
@@ -3224,6 +3219,7 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+//
 //
 //
 //
@@ -4758,11 +4754,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     selectDay: function selectDay(day) {
       if (!day.date || day.disabled) return;
       var date = this.core.dayjs(day.date);
-      date.set({
-        hour: this.time.hour(),
-        minute: this.time.minute(),
-        second: 0
-      });
+      date = date.set('hour', this.time.hour()).set('minute', this.time.minute()).set('second', 0);
       this.date = date.clone();
       this.time = date.clone();
 
@@ -4829,14 +4821,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       if (this.step < steps && !this.simple) return this.nextStep();
 
       if (this.hasStep('t')) {
-        var t = {
-          hour: this.time.hour(),
-          minute: this.time.minute()
-        };
-        this.date = this.date.set(t).clone();
-        this.selectedDates = selected.map(function (d) {
-          return d.set(t).clone();
+        this.date = this.date.set('hour', this.time.hour()).set('minute', this.time.minute()).clone();
+        selected = selected.map(function (d) {
+          return d.set('hour', _this12.time.hour()).set('minute', _this12.time.minute()).clone();
         });
+        this.selectedDates = selected;
       }
 
       if (['year', 'month', 'year-month'].indexOf(this.type) !== -1) this.selectedDates = selected.map(function () {
@@ -4844,8 +4833,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       });
 
       if (this.range && selected.length > 1) {
-        selected[0].startOf('day');
-        selected[1].endOf('day');
+        selected[0] = selected[0].startOf('day');
+        selected[1] = selected[1].endOf('day');
       }
 
       this.output = cloneDates(selected);
@@ -4900,11 +4889,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         this.date = getDate(payload);
       }
 
-      if (!this.hasStep('t')) this.date.set({
-        hour: 0,
-        minute: 0,
-        second: 0
-      });
+      if (!this.hasStep('t')) {
+        this.date = this.date.set('hour', 0).set('minute', 0).set('second', 0);
+      }
 
       if (this.isLower(this.date)) {
         this.date = this.minDate.clone();
@@ -4924,11 +4911,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     },
     goToday: function goToday() {
       var now = this.core.dayjs();
-      if (!this.hasStep('t')) now.set({
-        hour: 0,
-        minute: 0,
-        second: 0
-      });
+
+      if (!this.hasStep('t')) {
+        now = now.set('hour', 0).set('minute', 0).set('second', 0);
+      }
+
       this.date = now.clone();
       this.time = now.clone();
       this.selectedDates = [now.clone()];
@@ -4998,11 +4985,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
               a.year(year);
               b.year(year);
             } else if (this.type === 'time') {
-              a = now.clone().set({
-                h: a.hour(),
-                m: a.minute(),
-                s: 0
-              });
+              a = now.clone().set('h', a.hour()).set('m', a.minute()).set('s', 0);
               b = a.clone();
             }
 
