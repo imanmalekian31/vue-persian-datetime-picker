@@ -382,6 +382,7 @@
                   ref="time"
                   :date.sync="date"
                   :time.sync="time"
+                  :type="type"
                   :is-more="isMore"
                   :is-lower="isLower"
                   :min-date="minDate"
@@ -1366,11 +1367,10 @@ export default {
     selectDay(day) {
       if (!day.date || day.disabled) return
       let date = this.core.dayjs(day.date)
-      date.set({
-        hour: this.time.hour(),
-        minute: this.time.minute(),
-        second: 0
-      })
+      date = date
+        .set('hour', this.time.hour())
+        .set('minute', this.time.minute())
+        .set('second', 0)
       this.date = date.clone()
       this.time = date.clone()
       if (this.range) {
@@ -1429,17 +1429,25 @@ export default {
       if (this.step < steps && !this.simple) return this.nextStep()
 
       if (this.hasStep('t')) {
-        let t = { hour: this.time.hour(), minute: this.time.minute() }
-        this.date = this.date.set(t).clone()
-        this.selectedDates = selected.map(d => d.set(t).clone())
+        this.date = this.date
+          .set('hour', this.time.hour())
+          .set('minute', this.time.minute())
+          .clone()
+        selected = selected.map(d =>
+          d
+            .set('hour', this.time.hour())
+            .set('minute', this.time.minute())
+            .clone()
+        )
+        this.selectedDates = selected
       }
 
       if (['year', 'month', 'year-month'].indexOf(this.type) !== -1)
         this.selectedDates = selected.map(() => this.date.clone())
 
       if (this.range && selected.length > 1) {
-        selected[0].startOf('day')
-        selected[1].endOf('day')
+        selected[0] = selected[0].startOf('day')
+        selected[1] = selected[1].endOf('day')
       }
 
       this.output = cloneDates(selected)
@@ -1489,7 +1497,12 @@ export default {
         this.date = getDate(payload)
       }
 
-      if (!this.hasStep('t')) this.date.set({ hour: 0, minute: 0, second: 0 })
+      if (!this.hasStep('t')) {
+        this.date = this.date
+          .set('hour', 0)
+          .set('minute', 0)
+          .set('second', 0)
+      }
 
       if (this.isLower(this.date)) {
         this.date = this.minDate.clone()
@@ -1509,7 +1522,12 @@ export default {
     },
     goToday() {
       let now = this.core.dayjs()
-      if (!this.hasStep('t')) now.set({ hour: 0, minute: 0, second: 0 })
+      if (!this.hasStep('t')) {
+        now = now
+          .set('hour', 0)
+          .set('minute', 0)
+          .set('second', 0)
+      }
       this.date = now.clone()
       this.time = now.clone()
       this.selectedDates = [now.clone()]
@@ -1574,11 +1592,11 @@ export default {
               a.year(year)
               b.year(year)
             } else if (this.type === 'time') {
-              a = now.clone().set({
-                h: a.hour(),
-                m: a.minute(),
-                s: 0
-              })
+              a = now
+                .clone()
+                .set('h', a.hour())
+                .set('m', a.minute())
+                .set('s', 0)
               b = a.clone()
             }
             if (a.year() !== b.year() && a.year() < 1900) {
