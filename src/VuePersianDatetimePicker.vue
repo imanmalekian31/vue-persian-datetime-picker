@@ -1662,7 +1662,7 @@ export default {
     },
     setOutput(e) {
       if (!this.editable) return
-      let value = e.target.value.split(` ${this.displaySeparator} `)
+      let value = e.target.value.split(`${this.displaySeparator}`)
 
       let output = value.map(item => {
         item = `${item}`.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '')
