@@ -895,7 +895,15 @@ export default {
      * @default false
      * @example <date-picker is-jalali />
      */
-    isJalali: { type: Boolean, default: false }
+    isJalali: { type: Boolean, default: false },
+
+    /**
+     * customizing display separator
+     * @type String
+     * @default ~
+     * @example <date-picker display-separator="تا" />
+     */
+    displaySeparator: { type: String, default: '~' }
   },
   data() {
     let defaultLocale = this.locale.split(',')[0]
@@ -954,7 +962,7 @@ export default {
 
       if (!format) return ''
 
-      let separator = this.multiple ? ' | ' : ' ~ '
+      let separator = this.multiple ? ' | ' : ` ${this.displaySeparator} `
       return this.selectedDates.map(d => d.format(format)).join(separator)
     },
     month() {
@@ -1106,7 +1114,9 @@ export default {
             break
         }
       }
-      return this.output.map(d => d.format(format)).join(' ~ ')
+      return this.output
+        .map(d => d.format(format))
+        .join(` ${this.displaySeparator} `)
     },
     selfFormat() {
       let format = this.format
@@ -1169,7 +1179,7 @@ export default {
           let output = item.clone()
           return this.convertToLocaleNumber(output.format(format))
         })
-        .join(' ~ ')
+        .join(` ${this.displaySeparator} `)
     },
     isDisableTime() {
       return this.hasStep('t') && this.checkDisable('t', this.time)
@@ -1652,7 +1662,7 @@ export default {
     },
     setOutput(e) {
       if (!this.editable) return
-      let value = e.target.value.split('~')
+      let value = e.target.value.split(` ${this.displaySeparator} `)
 
       let output = value.map(item => {
         item = `${item}`.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '')
