@@ -442,10 +442,17 @@
                     v-text="lang.now"
                   />
                 </slot>
+
+                <template v-if="$slots['locale-btn']">
+                  <slot
+                    name="locale-btn"
+                    v-bind="{ vm, color, locales, setLocale }"
+                  />
+                </template>
               </div>
             </div>
             <div v-if="$slots.sidebar" class="vpd-sidebar">
-              <slot name="sidebar" />
+              <slot name="sidebar" v-bind="{ vm, color, locales, setLocale }" />
             </div>
           </div>
         </div>
