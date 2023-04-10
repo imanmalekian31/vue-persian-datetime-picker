@@ -443,12 +443,10 @@
                   />
                 </slot>
 
-                <template v-if="$slots['locale-btn']">
-                  <slot
-                    name="locale-btn"
-                    v-bind="{ vm, color, locales, setLocale }"
-                  />
-                </template>
+                <slot
+                  name="locale-btn"
+                  v-bind="{ vm, color, locales, setLocale }"
+                />
               </div>
             </div>
             <div v-if="$slots.sidebar" class="vpd-sidebar">
