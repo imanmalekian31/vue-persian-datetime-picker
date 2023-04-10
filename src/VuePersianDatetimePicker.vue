@@ -445,7 +445,7 @@
 
                 <slot
                   name="locale-btn"
-                  v-bind="{ vm, color, locales, setLocale }"
+                  v-bind="{ vm, color, locales, setLocale, localeData }"
                 />
               </div>
             </div>
