@@ -450,7 +450,10 @@
               </div>
             </div>
             <div v-if="$slots.sidebar" class="vpd-sidebar">
-              <slot name="sidebar" v-bind="{ vm, color, locales, setLocale }" />
+              <slot
+                name="sidebar"
+                v-bind="{ vm, color, locales, setLocale, localeData }"
+              />
             </div>
           </div>
         </div>
