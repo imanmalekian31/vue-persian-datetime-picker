@@ -82,7 +82,9 @@
           <div
             :class="[
               'vpd-content',
-              { 'vpd-sidebar-container': $slots.sidebar }
+              {
+                'vpd-sidebar-container': $slots.sidebar || $scopedSlots.sidebar
+              }
             ]"
           >
             <div
