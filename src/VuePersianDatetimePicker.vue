@@ -449,7 +449,10 @@
                 />
               </div>
             </div>
-            <div :class="$slots.sidebar ? 'vpd-sidebar' : 'vpd-none'">
+            <div
+              v-if="$slots.sidebar || $scopedSlots.sidebar"
+              class="vpd-sidebar"
+            >
               <slot
                 name="sidebar"
                 v-bind="{ vm, color, locales, setLocale, localeData }"
