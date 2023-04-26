@@ -457,7 +457,7 @@
             >
               <slot
                 name="sidebar"
-                v-bind="{ vm, color, locales, setLocale, localeData }"
+                v-bind="{ vm, color, locales, setLocale, currentStep }"
               />
             </div>
           </div>
