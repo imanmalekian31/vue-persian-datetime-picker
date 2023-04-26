@@ -1009,7 +1009,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"365d00dc-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VuePersianDatetimePicker.vue?vue&type=template&id=60a74f0b&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"365d00dc-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VuePersianDatetimePicker.vue?vue&type=template&id=207fbb54&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{staticClass:"vpd-main",class:{ 'vpd-is-popover': _vm.isPopover },attrs:{"data-type":_vm.type,"data-locale":_vm.localeData.name,"data-locale-dir":_vm.localeData.config.dir}},[(!_vm.customInputElement)?_c('span',{ref:"inputGroup",class:['vpd-input-group', { 'vpd-disabled': _vm.disabled }]},[_c('label',{staticClass:"vpd-icon-btn",style:({ 'background-color': _vm.color }),attrs:{"for":_vm.id},on:{"click":function($event){$event.preventDefault();$event.stopPropagation();_vm.visible = !_vm.visible}}},[_vm._t("label",[(_vm.type === 'time')?_c('time-icon',{attrs:{"width":"16px","height":"16px"}}):_c('calendar-icon',{attrs:{"width":"16px","height":"16px"}}),(_vm.label)?_c('span',{domProps:{"textContent":_vm._s(_vm.label)}}):_vm._e()])],2),_c('input',_vm._b({ref:"input",class:[_vm.inputClass, { 'vpd-is-editable': _vm.editable }],attrs:{"id":_vm.id,"type":"text","name":_vm.name,"placeholder":_vm.placeholder,"disabled":_vm.disabled},domProps:{"value":_vm.displayValue},on:{"focus":_vm.focus,"blur":_vm.setOutput,"keydown":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.setOutput($event)}}},'input',_vm.inputAttrs,false)),(_vm.altName)?_c('input',{attrs:{"type":"hidden","name":_vm.altName},domProps:{"value":_vm.altFormatted}}):_vm._e(),(_vm.clearable && !_vm.disabled && _vm.displayValue)?_c('i',{staticClass:"vpd-clear-btn",on:{"click":_vm.clearValue}},[_vm._t("clear-btn",[_vm._v("x")],null,{ vm: _vm.vm })],2):_vm._e()]):(_vm.altName)?_c('input',{attrs:{"type":"hidden","name":_vm.altName},domProps:{"value":_vm.altFormatted}}):_vm._e(),_c('transition',{attrs:{"name":_vm.isPopover ? '' : 'vpd-fade-scale'}},[(_vm.visible)?_c('div',{ref:"picker",class:[
         'vpd-wrapper',
         ("vpd-dir-" + (_vm.localeData.config.dir)),
@@ -1026,9 +1026,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
             {
               'vpd-sidebar-container': _vm.$slots.sidebar || _vm.$scopedSlots.sidebar
             }
-          ]},[(!_vm.simple)?_c('div',{staticClass:"vpd-header",style:({ 'background-color': _vm.color })},[(['date', 'datetime', 'year-month'].indexOf(_vm.type) !== -1)?_c('div',{class:['vpd-year-label', _vm.directionClass],on:{"click":function($event){return _vm.goStep('y')}}},[_c('transition',{attrs:{"name":"slideY"}},[_c('span',{key:_vm.selectedDate.year()},[_vm._t("header-year",[_vm._v(" "+_vm._s(_vm.convertToLocaleNumber(_vm.selectedDate.year()))+" ")],null,{ vm: _vm.vm, selectedDate: _vm.selectedDate })],2)])],1):_vm._e(),(_vm.type !== 'year-month')?_c('div',{class:['vpd-date', _vm.directionClass]},[_c('transition',{attrs:{"name":"slideY"}},[_c('span',{key:_vm.formattedDate},[_vm._t("header-date",[_vm._v(" "+_vm._s(_vm.convertToLocaleNumber(_vm.formattedDate))+" ")],null,{ vm: _vm.vm, formattedDate: _vm.formattedDate })],2)])],1):_vm._e(),(_vm.locales.length > 1)?_vm._t("locales",[_c('locale-change',{staticClass:"vpd-locales",attrs:{"locale-data":_vm.localeData,"core":_vm.core,"locales":_vm.locales},on:{"change":_vm.setLocale}})],null,{ vm: _vm.vm, locales: _vm.locales, setLocale: _vm.setLocale }):_vm._e()],2):_vm._e(),_c('div',{staticClass:"vpd-body"},[(_vm.simple)?_c('simple-mode',{attrs:{"lang":_vm.lang,"core":_vm.core,"range":_vm.range,"color":_vm.color,"locales":_vm.locales,"visible":_vm.visible,"multiple":_vm.multiple,"years":_vm.years,"months":_vm.months,"month-days":_vm.monthDays,"has-step":_vm.hasStep,"selected-dates":_vm.selectedDates,"formatted-date":_vm.formattedDate,"hovered-item":_vm.hoveredItem,"set-locale":_vm.setLocale,"convert-to-locale-number":_vm.convertToLocaleNumber},on:{"update:hoveredItem":function($event){_vm.hoveredItem=$event},"update:hovered-item":function($event){_vm.hoveredItem=$event},"select-year":_vm.selectYear,"select-month":_vm.selectMonth,"select-day":_vm.selectDay},scopedSlots:_vm._u([{key:"header-date",fn:function(slotData){return [_vm._t("header-date",null,null,slotData)]}},{key:"locales",fn:function(slotData){return [_vm._t("locales",null,null,slotData)]}},{key:"year-item",fn:function(slotData){return [_vm._t("year-item",null,null,slotData)]}},{key:"month-item",fn:function(slotData){return [_vm._t("month-item",null,null,slotData)]}},{key:"day-item",fn:function(slotData){return [_vm._t("day-item",null,null,slotData)]}}],null,true)}):[(_vm.hasStep('d'))?[_c('div',{class:['vpd-controls', _vm.directionClassDate]},[_c('button',{staticClass:"vpd-next",attrs:{"type":"button","title":_vm.lang.nextMonth,"disabled":_vm.nextMonthDisabled},on:{"click":_vm.nextMonth}},[_vm._t("next-month",[_c('arrow',{staticStyle:{"vertical-align":"middle"},attrs:{"width":"10","fill":"#000","direction":"right"}})])],2),_c('button',{staticClass:"vpd-prev",attrs:{"type":"button","title":_vm.lang.prevMonth,"disabled":_vm.prevMonthDisabled},on:{"click":_vm.prevMonth}},[_vm._t("prev-month",[_c('arrow',{staticStyle:{"vertical-align":"middle"},attrs:{"width":"10","fill":"#000","direction":"left"}})])],2),_c('transition',{attrs:{"name":"slideX"}},[_c('div',{key:_vm.date.month(),staticClass:"vpd-month-label",on:{"click":function($event){return _vm.goStep('m')}}},[_vm._t("month-name",[_c('span',{style:({ 'border-color': _vm.color, color: _vm.color }),domProps:{"textContent":_vm._s(
-                            _vm.convertToLocaleNumber(_vm.date.format('MMMM YYYY'))
-                          )}})],null,{ vm: _vm.vm, date: _vm.date, color: _vm.color })],2)])],1),_c('div',{staticClass:"vpd-clearfix",class:['vpd-month', _vm.directionClassDate]},[_c('div',{staticClass:"vpd-clearfix vpd-week"},_vm._l((_vm.weekDays),function(day,i){return _c('div',{key:(i + "-" + day),staticClass:"vpd-weekday"},[_vm._t("weekday",[_vm._v(" "+_vm._s(day)+" ")],null,{ vm: _vm.vm, day: day })],2)}),0),_c('div',{staticClass:"vpd-days",style:({ height: _vm.month.length * 40 + 'px' }),on:{"mouseleave":function($event){_vm.hoveredItem = null}}},[_c('transition',{class:_vm.directionClassDate,attrs:{"name":"slideX"}},[_c('div',{key:_vm.date.month()},_vm._l((_vm.monthDays),function(m,mi){return _c('div',{key:mi,staticClass:"vpd-clearfix"},_vm._l((m),function(day,di){return _c('div',_vm._b({key:di,class:[
+          ]},[(!_vm.simple)?_c('div',{staticClass:"vpd-header",style:({ 'background-color': _vm.color })},[(['date', 'datetime', 'year-month'].indexOf(_vm.type) !== -1)?_c('div',{class:['vpd-year-label', _vm.directionClass],on:{"click":function($event){return _vm.goStep('y')}}},[_c('transition',{attrs:{"name":"slideY"}},[_c('span',{key:_vm.selectedDate.year()},[_vm._t("header-year",[_vm._v(" "+_vm._s(_vm.convertToLocaleNumber(_vm.selectedDate.year()))+" ")],null,{ vm: _vm.vm, selectedDate: _vm.selectedDate })],2)])],1):_vm._e(),(_vm.type !== 'year-month')?_c('div',{class:['vpd-date', _vm.directionClass]},[_c('transition',{attrs:{"name":"slideY"}},[_c('span',{key:_vm.formattedDate},[_vm._t("header-date",[_vm._v(" "+_vm._s(_vm.convertToLocaleNumber(_vm.formattedDate))+" ")],null,{ vm: _vm.vm, formattedDate: _vm.formattedDate })],2)])],1):_vm._e(),(_vm.locales.length > 1)?_vm._t("locales",[_c('locale-change',{staticClass:"vpd-locales",attrs:{"locale-data":_vm.localeData,"core":_vm.core,"locales":_vm.locales},on:{"change":_vm.setLocale}})],null,{ vm: _vm.vm, locales: _vm.locales, setLocale: _vm.setLocale }):_vm._e()],2):_vm._e(),_c('div',{staticClass:"vpd-body"},[(_vm.simple)?_c('simple-mode',{attrs:{"lang":_vm.lang,"core":_vm.core,"range":_vm.range,"color":_vm.color,"locales":_vm.locales,"visible":_vm.visible,"multiple":_vm.multiple,"years":_vm.years,"months":_vm.months,"month-days":_vm.monthDays,"has-step":_vm.hasStep,"selected-dates":_vm.selectedDates,"formatted-date":_vm.formattedDate,"hovered-item":_vm.hoveredItem,"set-locale":_vm.setLocale,"convert-to-locale-number":_vm.convertToLocaleNumber},on:{"update:hoveredItem":function($event){_vm.hoveredItem=$event},"update:hovered-item":function($event){_vm.hoveredItem=$event},"select-year":_vm.selectYear,"select-month":_vm.selectMonth,"select-day":_vm.selectDay},scopedSlots:_vm._u([{key:"header-date",fn:function(slotData){return [_vm._t("header-date",null,null,slotData)]}},{key:"locales",fn:function(slotData){return [_vm._t("locales",null,null,slotData)]}},{key:"year-item",fn:function(slotData){return [_vm._t("year-item",null,null,slotData)]}},{key:"month-item",fn:function(slotData){return [_vm._t("month-item",null,null,slotData)]}},{key:"day-item",fn:function(slotData){return [_vm._t("day-item",null,null,slotData)]}}],null,true)}):[(_vm.hasStep('d'))?[_c('div',{class:['vpd-controls', _vm.directionClassDate]},[_vm._t("custom-header",[_c('button',{staticClass:"vpd-next",attrs:{"type":"button","title":_vm.lang.nextMonth,"disabled":_vm.nextMonthDisabled},on:{"click":_vm.nextMonth}},[_vm._t("next-month",[_c('arrow',{staticStyle:{"vertical-align":"middle"},attrs:{"width":"10","fill":"#000","direction":"right"}})])],2),_c('button',{staticClass:"vpd-prev",attrs:{"type":"button","title":_vm.lang.prevMonth,"disabled":_vm.prevMonthDisabled},on:{"click":_vm.prevMonth}},[_vm._t("prev-month",[_c('arrow',{staticStyle:{"vertical-align":"middle"},attrs:{"width":"10","fill":"#000","direction":"left"}})])],2),_c('transition',{attrs:{"name":"slideX"}},[_c('div',{key:_vm.date.month(),staticClass:"vpd-month-label",on:{"click":function($event){return _vm.goStep('m')}}},[_vm._t("month-name",[_c('span',{style:({ 'border-color': _vm.color, color: _vm.color }),domProps:{"textContent":_vm._s(
+                              _vm.convertToLocaleNumber(_vm.date.format('MMMM YYYY'))
+                            )}})],null,{ vm: _vm.vm, date: _vm.date, color: _vm.color })],2)])],null,{ vm: _vm.vm, color: _vm.color, goToday: _vm.goToday, date: _vm.date, lang: _vm.lang })],2),_c('div',{staticClass:"vpd-clearfix",class:['vpd-month', _vm.directionClassDate]},[_c('div',{staticClass:"vpd-clearfix vpd-week"},_vm._l((_vm.weekDays),function(day,i){return _c('div',{key:(i + "-" + day),staticClass:"vpd-weekday"},[_vm._t("weekday",[_vm._v(" "+_vm._s(day)+" ")],null,{ vm: _vm.vm, day: day })],2)}),0),_c('div',{staticClass:"vpd-days",style:({ height: _vm.month.length * 40 + 'px' }),on:{"mouseleave":function($event){_vm.hoveredItem = null}}},[_c('transition',{class:_vm.directionClassDate,attrs:{"name":"slideX"}},[_c('div',{key:_vm.date.month()},_vm._l((_vm.monthDays),function(m,mi){return _c('div',{key:mi,staticClass:"vpd-clearfix"},_vm._l((m),function(day,di){return _c('div',_vm._b({key:di,class:[
                               'vpd-day',
                               {
                                 'vpd-selected': day.selected,
@@ -1067,7 +1067,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/VuePersianDatetimePicker.vue?vue&type=template&id=60a74f0b&
+// CONCATENATED MODULE: ./src/VuePersianDatetimePicker.vue?vue&type=template&id=207fbb54&
 
 // EXTERNAL MODULE: ./src/assets/scss/style.scss
 var style = __webpack_require__("78a7");
@@ -3693,6 +3693,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -4439,6 +4444,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     nextMonthDisabled: function nextMonthDisabled() {
       return this.hasStep('d') && this.maxDate && this.maxDate.clone().startOf('month') <= this.date.clone().startOf('month');
     },
+    prevYearDisabled: function prevYearDisabled() {
+      return this.hasStep('d') && this.minDate && this.minDate.clone().startOf('year') >= this.date.clone().startOf('year');
+    },
+    nextYearDisabled: function nextYearDisabled() {
+      return this.hasStep('d') && this.maxDate && this.maxDate.clone().startOf('year') <= this.date.clone().startOf('year');
+    },
     canGoToday: function canGoToday() {
       if (!this.minDate && !this.maxDate) return true;
       var now = this.now,
@@ -4802,6 +4813,14 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     prevMonth: function prevMonth() {
       this.date = this.date.clone().add(-1, 'month');
       this.$emit('prev-month', this.date.clone());
+    },
+    nextYear: function nextYear() {
+      this.date = this.date.clone().add(1, 'year');
+      this.$emit('next-year', this.date.clone());
+    },
+    prevYear: function prevYear() {
+      this.date = this.date.clone().add(-1, 'year');
+      this.$emit('prev-year', this.date.clone());
     },
     selectDay: function selectDay(day) {
       if (!day.date || day.disabled) return;
