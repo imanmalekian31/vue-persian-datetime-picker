@@ -1,7 +1,7 @@
 {
   "name": "persian-datetime-picker-vue2",
   "description": "A vue plugin to select jalali date and time base on dayjs",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "private": false,
   "author": "Iman Malekian",
   "license": "MIT",
