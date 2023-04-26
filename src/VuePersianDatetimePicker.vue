@@ -173,54 +173,59 @@
               <template v-else>
                 <template v-if="hasStep('d')">
                   <div :class="['vpd-controls', directionClassDate]">
-                    <button
-                      type="button"
-                      class="vpd-next"
-                      :title="lang.nextMonth"
-                      :disabled="nextMonthDisabled"
-                      @click="nextMonth"
+                    <slot
+                      name="custom-header"
+                      v-bind="{ vm, color, goToday, date, lang }"
                     >
-                      <slot name="next-month">
-                        <arrow
-                          width="10"
-                          fill="#000"
-                          direction="right"
-                          style="vertical-align: middle"
-                        />
-                      </slot>
-                    </button>
-                    <button
-                      type="button"
-                      class="vpd-prev"
-                      :title="lang.prevMonth"
-                      :disabled="prevMonthDisabled"
-                      @click="prevMonth"
-                    >
-                      <slot name="prev-month">
-                        <arrow
-                          width="10"
-                          fill="#000"
-                          direction="left"
-                          style="vertical-align: middle"
-                        />
-                      </slot>
-                    </button>
-                    <transition name="slideX">
-                      <div
-                        :key="date.month()"
-                        class="vpd-month-label"
-                        @click="goStep('m')"
+                      <button
+                        type="button"
+                        class="vpd-next"
+                        :title="lang.nextMonth"
+                        :disabled="nextMonthDisabled"
+                        @click="nextMonth"
                       >
-                        <slot name="month-name" v-bind="{ vm, date, color }">
-                          <span
-                            :style="{ 'border-color': color, color }"
-                            v-text="
-                              convertToLocaleNumber(date.format('MMMM YYYY'))
-                            "
+                        <slot name="next-month">
+                          <arrow
+                            width="10"
+                            fill="#000"
+                            direction="right"
+                            style="vertical-align: middle"
                           />
                         </slot>
-                      </div>
-                    </transition>
+                      </button>
+                      <button
+                        type="button"
+                        class="vpd-prev"
+                        :title="lang.prevMonth"
+                        :disabled="prevMonthDisabled"
+                        @click="prevMonth"
+                      >
+                        <slot name="prev-month">
+                          <arrow
+                            width="10"
+                            fill="#000"
+                            direction="left"
+                            style="vertical-align: middle"
+                          />
+                        </slot>
+                      </button>
+                      <transition name="slideX">
+                        <div
+                          :key="date.month()"
+                          class="vpd-month-label"
+                          @click="goStep('m')"
+                        >
+                          <slot name="month-name" v-bind="{ vm, date, color }">
+                            <span
+                              :style="{ 'border-color': color, color }"
+                              v-text="
+                                convertToLocaleNumber(date.format('MMMM YYYY'))
+                              "
+                            />
+                          </slot>
+                        </div>
+                      </transition>
+                    </slot>
                   </div>
                   <div
                     class="vpd-clearfix"
@@ -1075,6 +1080,22 @@ export default {
           this.date.clone().startOf('month')
       )
     },
+    prevYearDisabled() {
+      return (
+        this.hasStep('d') &&
+        this.minDate &&
+        this.minDate.clone().startOf('year') >=
+          this.date.clone().startOf('year')
+      )
+    },
+    nextYearDisabled() {
+      return (
+        this.hasStep('d') &&
+        this.maxDate &&
+        this.maxDate.clone().startOf('year') <=
+          this.date.clone().startOf('year')
+      )
+    },
     canGoToday() {
       if (!this.minDate && !this.maxDate) return true
       let now = this.now,
@@ -1405,6 +1426,14 @@ export default {
     prevMonth() {
       this.date = this.date.clone().add(-1, 'month')
       this.$emit('prev-month', this.date.clone())
+    },
+    nextYear() {
+      this.date = this.date.clone().add(1, 'year')
+      this.$emit('next-year', this.date.clone())
+    },
+    prevYear() {
+      this.date = this.date.clone().add(-1, 'year')
+      this.$emit('prev-year', this.date.clone())
     },
     selectDay(day) {
       if (!day.date || day.disabled) return
