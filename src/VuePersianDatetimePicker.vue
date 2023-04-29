@@ -175,7 +175,7 @@
                   <div :class="['vpd-controls', directionClassDate]">
                     <slot
                       name="custom-header"
-                      v-bind="{ vm, color, goToday, date, lang }"
+                      v-bind="{ vm, color, goToday, date, lang, showToday }"
                     >
                       <button
                         type="button"
@@ -1436,6 +1436,7 @@ export default {
       this.$emit('prev-year', this.date.clone())
     },
     selectDay(day) {
+      this.$emit('selected-day', day)
       if (!day.date || day.disabled) return
       let date = this.core.dayjs(day.date)
       date = date
@@ -1602,6 +1603,15 @@ export default {
       this.date = now.clone()
       this.time = now.clone()
       this.selectedDates = [now.clone()]
+    },
+    showToday() {
+      const currYear = this.core.dayjs().get('y')
+      const currMonth = this.core.dayjs().get('M')
+
+      this.date = this.date
+        .clone()
+        .set('y', currYear)
+        .set('M', currMonth)
     },
     setType() {
       switch (this.type) {
